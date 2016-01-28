@@ -10,11 +10,11 @@ namespace Snake1
     {
         static void Main(string[] args)
         {
-            point p1 = new point(1, 3, '*');
-            p1.Draw();
+            //point p1 = new point(1, 3, '*');
+            //p1.Draw();
 
-            point p2 = new point(4, 5, '#');
-            p2.Draw();
+            //point p2 = new point(4, 5, '#');
+            //p2.Draw();
 
             horosontalline line = new horosontalline(5, 15, 8, '#');
             line.hDraw();
