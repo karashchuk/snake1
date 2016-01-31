@@ -28,7 +28,7 @@ namespace Snake1
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
 
-            FoodCreator foodCreator = new FoodCreator(80, 25,$);
+            FoodCreator foodCreator = new FoodCreator(80, 25,'$');
             point food = foodCreator.CreateFood();
             food.Draw();
 
@@ -49,7 +49,7 @@ namespace Snake1
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandlyKey(key.Key);
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(200);
                 snake.Move();
             }
 
