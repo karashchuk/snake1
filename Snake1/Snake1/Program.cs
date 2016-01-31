@@ -24,8 +24,8 @@ namespace Snake1
             rightline.Drow();
 
             //Отрисовка точек
-            point p = new point(4, 5, '%');
-            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            point p = new point(74, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.LEFT);
             snake.Drow();
 
             FoodCreator foodCreator = new FoodCreator(80, 25,'$');
@@ -47,9 +47,9 @@ namespace Snake1
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    snake.HandlyKey(key.Key);
+                    snake.HandlyKey ( key.Key );
                 }
-                Thread.Sleep(200);
+                Thread.Sleep(100);
                 snake.Move();
             }
 

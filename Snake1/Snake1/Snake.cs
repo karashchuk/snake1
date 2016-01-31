@@ -63,7 +63,7 @@ namespace Snake1
             //if (head.x == food.x && head.y == food.y)
             {
                 food.sym = head.sym;
-                food.Draw();
+                //food.Draw();
                 pList.Add(food);
                 return true;
             }
