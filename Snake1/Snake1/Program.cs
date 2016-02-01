@@ -50,7 +50,7 @@ namespace Snake1
                 snake.Move();
             }
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
 
         }
