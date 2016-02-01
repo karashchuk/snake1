@@ -26,7 +26,18 @@ namespace Snake1
                     return true;
             }
             return false;
-
         }
+        private bool IsHit(point point)
+        {
+            foreach (var p in pList)
+            {
+                if (p.IsHit(point))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
