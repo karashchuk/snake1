@@ -13,7 +13,7 @@ namespace Snake1
         {
             Console.SetBufferSize(80, 25);
             VerticalLine v1 = new VerticalLine(12, 0, 12, '&');
-            //v1.Drow();
+            Draw(v1);
             point p = new point(4, 5, '*');
             Figure fSnake = new Snake(p, 4, Direction.RIGHT);
             //fSnake.Drow();
@@ -36,10 +36,10 @@ namespace Snake1
 
         }
 
-        //static void Draw(Figure figure)
-        //{
-        //    figure.Drow();
-        //}
+        static void Draw(Figure figure)
+        {
+            figure.Drow();
+        }
 
 
     }
