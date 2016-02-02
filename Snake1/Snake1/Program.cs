@@ -23,9 +23,12 @@ namespace Snake1
 
             FoodCreator foodCreator = new FoodCreator(80, 25,'$');
             point food = foodCreator.CreateFood();
+            Console.ForegroundColor = ConsoleColor.Red;
             food.Draw();
+            Console.ForegroundColor = ConsoleColor.White;
 
-            while(true)
+
+            while (true)
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
@@ -34,7 +37,9 @@ namespace Snake1
                 if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     food.Draw();
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
                 else
                 {

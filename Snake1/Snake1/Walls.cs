@@ -23,7 +23,7 @@ namespace Snake1
             wallList.Add(downline);
             wallList.Add(leftline);
             wallList.Add(rightline);
-
+        
         }
 
         internal bool IsHit(Figure figure)
@@ -40,10 +40,14 @@ namespace Snake1
 
         public void Draw()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
             foreach (var wall in wallList)
             {
                 wall.Drow();
             }
+            Console.ForegroundColor = ConsoleColor.White;
+
         }
     }
 }
