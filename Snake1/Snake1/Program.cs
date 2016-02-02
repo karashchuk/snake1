@@ -15,6 +15,7 @@ namespace Snake1
 
             Walls walls = new Walls (80, 25,'+');
             walls.Draw();
+            Metka:
 
             //Отрисовка точек
             point p = new point(4, 5, '*');
@@ -56,10 +57,26 @@ namespace Snake1
 
             }
             WriteGameOver(snake);
+        Metka2:
+            ConsoleKeyInfo key1 = Console.ReadKey();
+            if (key1.Key == ConsoleKey.Y)
+            {
+                walls.ClearWalls(80, 25);
+                goto Metka;
+            }
+            else if (key1.Key == ConsoleKey.N)
+            {
+                walls.ClearWalls(80, 25);
+                WriteText("That's all!", 25, 10);
+            }
+            else
+                goto Metka2;
+
             Console.ReadLine();
 
 
         }
+
 
         private static void WriteGameOver(Snake snake)
         {
@@ -76,6 +93,8 @@ namespace Snake1
             WriteText("G A M E   O V E R", xOff+1, yOff++);
             yOff++;
             WriteText(myString, xOff + 3, yOff++);
+            yOff++;
+            WriteText("Еще раз?  Y/N", xOff + 3, yOff++);
             yOff++;
             WriteText("===================", xOff, yOff++);
         }

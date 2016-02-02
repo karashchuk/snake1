@@ -49,5 +49,20 @@ namespace Snake1
             Console.ForegroundColor = ConsoleColor.White;
 
         }
+
+        public void ClearWalls(int mapWidht, int mapHight)
+        {
+            List<Figure> wList = new List<Figure>();
+            for (int i=1;i< mapHight-2;i++)
+            {
+                horosontalline lline = new horosontalline(1, mapWidht - 3, i, ' ');
+                wList.Add(lline);
+
+            }
+            foreach (var line in wList)
+            {
+                line.Drow();
+            }
+        }
     }
 }
